@@ -15,9 +15,20 @@ This code needs a GPU server to run.
 git clone https://huggingface.co/ansukla/roberta
 ```
 
+The above step requires git-lfs to be installed to pull to large model files. cd to roberta folder, and if the model files are lfs references do the following to pull the models:
+```
+git lfs fetch
+```
+
 ```
 git clone https://huggingface.co/ansukla/sif
 ```
+
+The above step requires git-lfs to be installed to pull to large model files. cd to roberta folder, and if the model files are lfs references do the following to pull the models:
+```
+git lfs fetch
+```
+
 
 2. Download spacy and unzip it such that you have the following folder:
 
@@ -49,7 +60,7 @@ Other supported models are:
  - io_qa
  - qasrl
 ```
-docker run -p 5010:5001 -v /Users/ambikasukla/projects/models/:/models -e MODELS_DIR=/models/ -e MODELS=roberta-qa -e LEARNING_MODELS= nlm-model-service
+docker run -p 5010:5000 -v /Users/ambikasukla/projects/models/:/models -e MODELS_DIR=/models/ -e MODELS=roberta-qa -e LEARNING_MODELS= nlm-model-service
 ```
 Note that LEARNING_MODELS should always be blank and it is no longer used by the code.
 
