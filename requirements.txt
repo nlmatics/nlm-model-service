@@ -12,8 +12,6 @@ pandas
 scipy
 segtok==1.5.10
 sentence_transformers
-typing-inspect==0.8.0
-typing_extensions==4.5.0
 spacy==3.2.0
 accelerate   
 tables
